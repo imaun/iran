@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{87058502-C92C-4DCF-BC05-8C6865B585FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iran.Core", "src\Iran.Core\Iran.Core.csproj", "{737FE17F-62A4-4893-A61F-A02B9C7273CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iran.Core", "src\Iran.Core\Iran.Core.csproj", "{737FE17F-62A4-4893-A61F-A02B9C7273CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5203653E-221A-451C-BCA4-B3375B6D23B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iran.DataCollector", "test\Iran.DataCollector\Iran.DataCollector.csproj", "{782DA847-0C80-4BA6-A1A9-8062B41C5D7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{737FE17F-62A4-4893-A61F-A02B9C7273CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{737FE17F-62A4-4893-A61F-A02B9C7273CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{737FE17F-62A4-4893-A61F-A02B9C7273CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782DA847-0C80-4BA6-A1A9-8062B41C5D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782DA847-0C80-4BA6-A1A9-8062B41C5D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782DA847-0C80-4BA6-A1A9-8062B41C5D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782DA847-0C80-4BA6-A1A9-8062B41C5D7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{737FE17F-62A4-4893-A61F-A02B9C7273CA} = {87058502-C92C-4DCF-BC05-8C6865B585FB}
+		{782DA847-0C80-4BA6-A1A9-8062B41C5D7A} = {5203653E-221A-451C-BCA4-B3375B6D23B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83E26EA4-9801-45A0-A108-81492CC1F0D6}

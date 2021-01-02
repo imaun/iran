@@ -1,14 +1,9 @@
-﻿namespace Iran.Core.Locations
-{
+﻿namespace Iran.Core.Locations {
     public enum IranCityType {
         /// <summary>
         /// استان
         /// </summary>
-        Province = 0,
-        /// <summary>
-        /// شهر
-        /// </summary>
-        City = 1,
+        Province = 1,
         /// <summary>
         /// شهرستان
         /// </summary>
@@ -18,12 +13,16 @@
         /// </summary>
         District = 3,
         /// <summary>
+        /// شهر
+        /// </summary>
+        City = 4,
+        /// <summary>
         /// دهستان
         /// </summary>
-        RuralSection = 4,
+        RuralSection = 5,
         /// <summary>
         /// روستا
         /// </summary>
-        Village = 5
+        Village = 6
     }
 }
