@@ -11,7 +11,7 @@
         public string Name { get; set; }
         public IranCityType CityType { get; set; }
         public string PhonePreNumber { get; set; }
-        public int AmarCode { get; set; }
+        public string AmarCode { get; set; }
         public int? ParentId { get; set; }
         public int? ProvinceId { get; set; }
         public string ProvinceName { get; set; }
@@ -27,6 +27,7 @@
         public string Longtiude { get; set; }
         public string Description { get; set; }
         public int? VillageType { get; set; }
-        public int? Diag { get; set; }
+        public string Diag { get; set; }
+        public string ShahrType { get; set; }
     }
 }

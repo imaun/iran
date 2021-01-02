@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Globalization;
 using System.Threading.Tasks;
 using CsvHelper;
@@ -11,12 +12,12 @@ namespace Iran.Core.Locations {
 
     public class IranCityProvider {
 
-        private const string _RES_Provinces_Path = "Resource/ostan.csv";
-        private const string _RES_Counties_Path = "Resource/shahrestan.csv";
-        private const string _RES_Districts_Path = "Resource/bakhsh.csv";
-        private const string _RES_Cities_Path = "Resource/shahr.csv";
-        private const string _RES_RuralSections_Path = "Resource/dehestan.csv";
-        private const string _RES_Village_Path = "Resource/abadi.csv";
+        private const string _RES_Provinces_Path = "Iran.Core.Resource.ostan.csv";
+        private const string _RES_Counties_Path = "Iran.Core.Resource.shahrestan.csv";
+        private const string _RES_Districts_Path = "Iran.Core.Resource.bakhsh.csv";
+        private const string _RES_Cities_Path = "Iran.Core.Resource.shahr.csv";
+        private const string _RES_RuralSections_Path = "Iran.Core.Resource.dehestan.csv";
+        private const string _RES_Village_Path = "Iran.Core.Resource.abadi.csv";
 
         public IEnumerable<IranCity> GetIranProvinces()
             => getFromCsv<IranCityOstan>(_RES_Provinces_Path).ToIranCity();
@@ -58,7 +59,7 @@ namespace Iran.Core.Locations {
             var resourceStream = ResourceHelper.GetResourceStream(resourcePath);
             using var reader = new StreamReader(resourceStream);
             using var csv = new CsvReader(reader, culture: CultureInfo.InvariantCulture);
-            return csv.GetRecords<T>();
+            return csv.GetRecords<T>().ToList();
         }
 
         private async Task<IEnumerable<T>> getFromCsvAsync<T>(string resourcePath) where T: class {
@@ -69,5 +70,6 @@ namespace Iran.Core.Locations {
                 .GetRecordsAsync<T>()
                 .ToListAsync<T>();
         }
+
     }
 }

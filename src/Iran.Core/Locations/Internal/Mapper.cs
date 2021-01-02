@@ -77,7 +77,8 @@ namespace Iran.Core.Locations.Internal {
                     ProvinceId = item.ostan,
                     CountyId = item.shahrestan,
                     DistrictId = item.bakhsh,
-                    CityType = IranCityType.City
+                    CityType = IranCityType.City,
+                    ShahrType = item.shahr_type
                 });
             return result;
         }
